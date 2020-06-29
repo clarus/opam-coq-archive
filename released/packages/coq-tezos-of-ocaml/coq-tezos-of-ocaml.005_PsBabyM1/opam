@@ -1,0 +1,31 @@
+opam-version: "2.0"
+maintainer: "dev@clarus.me"
+homepage: "https://gitlab.com/clarus1/coq-tezos-of-ocaml"
+dev-repo: "git+https://gitlab.com/clarus1/coq-tezos-of-ocaml.git"
+bug-reports: "https://gitlab.com/clarus1/coq-tezos-of-ocaml/issues"
+authors: ["Guillaume Claret"]
+license: "MIT"
+build: [
+  ["coq_makefile" "-f" "_CoqProject" "-o" "Makefile"]
+  [make "-j%{jobs}%"]
+]
+install: [
+  [make "install"]
+]
+depends: [
+  "coq" {>= "8.11"}
+  "coq-of-ocaml"
+]
+tags: [
+  "keyword:blockchain"
+  "keyword:formalization"
+  "keyword:michelson"
+  "keyword:tezos"
+  "logpath:TezosOfOCaml"
+]
+synopsis: "Coq formalization of the implementation of the economic protocol of Tezos"
+
+url {
+  src: "https://gitlab.com/clarus1/coq-tezos-of-ocaml/uploads/43709451c231012a127943fe81607ae0/005_PsBabyM1.tar.gz"
+  checksum: "sha512=f94634d42264c1c5627809fb096d9db9a93eefb22d10a29aad4c09c716f1260fb424ecc780f135c819b2dbb60984b8bc2e4e6205ecb85ec2b152a10b844f9610"
+}
